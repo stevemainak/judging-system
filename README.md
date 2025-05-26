@@ -1,6 +1,6 @@
 Instructions on How to Run the Project Locally (Using XAMPP)
 Set up XAMPP
-Installed and launched XAMPP, making sure Apache and MySQL services were running.
+Install and launch XAMPP, make sure Apache and MySQL services are running.
 
 Copy Project Files
 place the project folder (e.g., judging-system) inside the htdocs directory:
@@ -53,14 +53,14 @@ FOREIGN KEY (judge_id) REFERENCES judges(id)
 Admin Panel for Judge Management
 I created an admin panel (no login required for this version) where I can:
 
-Add judges by entering their name and a unique judge ID.
+Add judges by entering their name and a unique judge CODE.
 
 View all judges that have been added to the system.
 
 The data is stored in a judges table, and I've kept the layout simple for easy navigation. If I had more time, I would definitely add authentication to protect the admin section.
 
 Judge Portal & Scoring
-I built a judge scoring interface where each judge can:
+I built a judge scoring interface where each judge logs in via the Judge CODE and can:
 
 View a list of all users (participants).
 
@@ -77,7 +77,7 @@ Automatically sorts the list in descending order based on total points.
 
 Highlights users visually depending on their scores using CSS.
 
-The scoreboard auto-refreshes every few seconds using JavaScript to reflect any new scores in real-time.
+The scoreboard auto-refreshes every few seconds using JavaScript and a simple <meta> tag inside the <head> section of my HTML file to automatically refresh the entire page at set intervals.
 
 Assumptions Made
 Users (participants) are pre-registered manually in the users table just for this demo.
